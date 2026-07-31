@@ -160,13 +160,16 @@ fn held_pack_json(result: &Analysis) -> String {
 fn run(args: &[String]) -> Result<String, String> {
     let [command, path] = args else {
         return Err(
-            "usage: lifeline <analyze|held-pack|official-baseline|official-held-pack|candidate-baseline|candidate-held-pack|level2-baseline|level2-held-pack> <fixture.tsv>"
+            "usage: lifeline <analyze|held-pack|official-baseline|official-held-pack|candidate-baseline|candidate-held-pack|level2-baseline|level2-held-pack|program-scenarios|program-realization|program-accounting|program-alternatives|program-incidence|program-delivery|program-adaptive|program-peers|program-held-pack> <fixture.tsv>"
                 .into(),
         );
     };
     let input = fs::read_to_string(path).map_err(|error| format!("{path}: {error}"))?;
     if !input.contains("# source_id=") || !input.contains("# evidence_label=") {
         return Err("fixture must declare source_id and evidence_label".into());
+    }
+    if command.starts_with("program-") {
+        return lifeline_program::run(command, &input);
     }
     if command.starts_with("candidate-") || command.starts_with("level2-") {
         return lifeline_calfresh::run(command, &input);

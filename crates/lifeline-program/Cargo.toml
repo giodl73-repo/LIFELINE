@@ -1,0 +1,9 @@
+[package]
+name = "lifeline-program"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Income-security semantic program features for LIFELINE"
+
+[lib]
+path = "src/lib.rs"

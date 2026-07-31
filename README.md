@@ -8,6 +8,13 @@ computes disposable resources at every step, detects benefit cliffs, measures
 take-up, and blocks promotion when notice or appeal protections are absent.
 It then emits a held Taxlane ISF evidence pack whose fiscal fields remain null.
 
+LIFELINE now carries that first screen through a complete bounded semantic
+program. Thirteen executable features cover the household cliff screen,
+official SNAP scale, the California implementation candidate and comparison
+baseline, scenarios, service realization, accounting, alternatives, incidence,
+delivery feasibility, adaptive successors, normalized illustrative comparison,
+and an integrated held handoff.
+
 Its first official run compares USDA's FY2024 and FY2025 national SNAP
 summaries. FY2025 average monthly participation was **42.382 million**, up
 **673,000 (1.61%)**; total program costs were **$102.590 billion**, up **2.50%**.
@@ -36,6 +43,15 @@ cargo run --quiet -- official-baseline fixtures/official/usda-fns-snap-2024-2025
 cargo run --quiet -- official-held-pack fixtures/official/usda-fns-snap-2024-2025.tsv
 cargo run --quiet -- level2-baseline fixtures/official/calfresh-access-rights-floors-2026-07-28.tsv
 cargo run --quiet -- level2-held-pack fixtures/official/calfresh-access-rights-floors-2026-07-28.tsv
+cargo run --quiet -- program-scenarios fixtures/synthetic/calfresh-semantic-program.tsv
+cargo run --quiet -- program-realization fixtures/synthetic/calfresh-semantic-program.tsv
+cargo run --quiet -- program-accounting fixtures/synthetic/calfresh-semantic-program.tsv
+cargo run --quiet -- program-alternatives fixtures/synthetic/calfresh-semantic-program.tsv
+cargo run --quiet -- program-incidence fixtures/synthetic/calfresh-semantic-program.tsv
+cargo run --quiet -- program-delivery fixtures/synthetic/calfresh-semantic-program.tsv
+cargo run --quiet -- program-adaptive fixtures/synthetic/calfresh-semantic-program.tsv
+cargo run --quiet -- program-peers fixtures/synthetic/calfresh-semantic-program.tsv
+cargo run --quiet -- program-held-pack fixtures/synthetic/calfresh-semantic-program.tsv
 ```
 
 The Cedar rows remain deliberately synthetic and use the 2026 HHS poverty
@@ -105,8 +121,35 @@ accuracy, churn, rights, county capacity, and candidate admission held.
 - A domain finding can be handed to Taxlane while admission, allocation,
   savings, and rate authority remain false.
 - Preimplementation operations and aggregate hearings can be fixed as future
-  comparison surfaces without being mislabeled as candidate outcomes.
+comparison surfaces without being mislabeled as candidate outcomes.
 - Stale churn data and uncoded hearing flows remain explicit evidence gaps.
+
+## Complete semantic-program demonstration
+
+The program fixture is synthetic and aggregate, but its mechanics are
+consequential. A stress path takes access from 88.91% to 78.00%; recovery rises
+to 90.00% without rewriting either predecessor. An illustrative 100,000-
+application chain reaches 68,000 benefit receipts and 54,000 renewals. Its
+largest handoff loss is eligibility, and every loss remains distinct from
+savings.
+
+Accounting combines $86.8M of gross administration, a -$78.6M caseload offset,
+and $12.0M of illustrative transition work into $20.2M of net public pressure.
+The transition amount is synthetic and cannot enter Taxlane. It exists to
+prove that an implementation comparison cannot omit transition cost.
+
+Three alternatives expose different access, rights, and cost results. Two pass
+the declared synthetic access-and-rights screen, but LIFELINE selects neither.
+The incidence map reconciles five stakeholder groups to zero points while
+showing households as the largest burden carrier. Six of seven delivery gates
+pass; missing county capacity keeps delivery held. The adaptive rule then
+creates immutable version 2 because observed synthetic access falls below its
+declared trigger.
+
+The comparison feature uses a definition-matched **illustrative** 95% value.
+It is deliberately not called an official peer or policy target. Replacing it
+with a custodied public comparator is the next corpus task, not a condition for
+replaying the semantic mechanics.
 
 ## Validate
 
@@ -116,6 +159,7 @@ cargo test --workspace --all-targets
 cargo run --quiet -- analyze fixtures/cedar-benefit-path.tsv
 cargo run --quiet -- official-baseline fixtures/official/usda-fns-snap-2024-2025.tsv
 cargo run --quiet -- level2-baseline fixtures/official/calfresh-access-rights-floors-2026-07-28.tsv
+cargo run --quiet -- program-held-pack fixtures/synthetic/calfresh-semantic-program.tsv
 ```
 
 Official anchor: [HHS 2026 Poverty Guidelines](https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines).

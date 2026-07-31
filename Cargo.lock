@@ -7,8 +7,13 @@ name = "lifeline"
 version = "0.1.0"
 dependencies = [
  "lifeline-calfresh",
+ "lifeline-program",
 ]
 
 [[package]]
 name = "lifeline-calfresh"
+version = "0.1.0"
+
+[[package]]
+name = "lifeline-program"
 version = "0.1.0"

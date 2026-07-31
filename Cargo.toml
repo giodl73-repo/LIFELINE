@@ -6,7 +6,8 @@ license = "MIT"
 description = "Rights-bounded household benefit continuity analysis"
 
 [workspace]
-members = ["crates/lifeline-calfresh"]
+members = ["crates/lifeline-calfresh", "crates/lifeline-program"]
 
 [dependencies]
 lifeline-calfresh = { path = "crates/lifeline-calfresh" }
+lifeline-program = { path = "crates/lifeline-program" }

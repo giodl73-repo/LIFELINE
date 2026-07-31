@@ -17,6 +17,16 @@ and cost shifting are considered together.
    candidate-specific postimplementation realization held.
 5. Independently reviewed held Taxlane pack.
 
+## Current semantic boundary
+
+The bounded program now demonstrates scenarios, realization, reconciled
+accounting, constrained alternatives, stakeholder incidence, delivery gates,
+adaptive successors, illustrative normalized comparison, and an integrated
+held handoff in addition to the official and candidate surfaces above. The
+comparison is synthetic and explicitly non-official. Candidate-specific
+postimplementation outcomes and a public normalized comparator remain corpus
+work; they are not fabricated by the semantic program.
+
 ## Non-goals
 
 Person records, eligibility decisions, automated adverse actions, policy
