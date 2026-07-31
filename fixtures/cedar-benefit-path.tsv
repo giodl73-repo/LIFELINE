@@ -1,0 +1,10 @@
+# evidence_label=synthetic_aggregate_example
+# source_id=HHS-POVERTY-2026
+# household_size=4
+# poverty_guideline_dollars=33000
+earnings_dollars	benefits_dollars	admin_hours	eligible_households	served_households	notice_protected	appeal_protected
+0	30000	18	1000	820	true	true
+10000	25000	16	1000	850	true	true
+20000	18000	14	1000	870	true	true
+30000	6000	12	800	680	true	true
+40000	0	8	200	150	true	true
