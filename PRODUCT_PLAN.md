@@ -10,7 +10,8 @@ and cost shifting are considered together.
 
 1. Benefit-continuity screen — implemented.
 2. Official aggregate participation and processing-time source pack.
-3. One state/program-specific reviewed scenario with explicit legal perimeter.
+3. One state/program-specific reviewed scenario with explicit legal perimeter —
+   implemented as the held California H.R. 1 CalFresh administration envelope.
 4. Candidate comparison with adequacy and distribution floors.
 5. Independently reviewed held Taxlane pack.
 

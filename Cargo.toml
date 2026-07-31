@@ -5,4 +5,8 @@ edition = "2021"
 license = "MIT"
 description = "Rights-bounded household benefit continuity analysis"
 
+[workspace]
+members = ["crates/lifeline-calfresh"]
+
 [dependencies]
+lifeline-calfresh = { path = "crates/lifeline-calfresh" }

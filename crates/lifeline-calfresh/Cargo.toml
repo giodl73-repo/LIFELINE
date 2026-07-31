@@ -1,0 +1,9 @@
+[package]
+name = "lifeline-calfresh"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "California CalFresh candidate-envelope feature for LIFELINE"
+
+[lib]
+path = "src/lib.rs"

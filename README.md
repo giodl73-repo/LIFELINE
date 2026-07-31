@@ -30,6 +30,8 @@ net resources  $38,000 -> $36,000   CLiff: -$2,000
 ```powershell
 cargo run --quiet -- analyze fixtures/cedar-benefit-path.tsv
 cargo run --quiet -- held-pack fixtures/cedar-benefit-path.tsv
+cargo run --quiet -- candidate-baseline fixtures/official/california-hr1-abawd-administration-2025-2027.tsv
+cargo run --quiet -- candidate-held-pack fixtures/official/california-hr1-abawd-administration-2025-2027.tsv
 cargo run --quiet -- official-baseline fixtures/official/usda-fns-snap-2024-2025.tsv
 cargo run --quiet -- official-held-pack fixtures/official/usda-fns-snap-2024-2025.tsv
 ```
@@ -39,6 +41,34 @@ guidelines only as a scale anchor. The official SNAP fixture is a compact
 derivation of the FNS national annual summary with its capture checksum. Neither
 path makes individual decisions.
 
+## California implementation stress test
+
+LIFELINE now turns California's official H.R. 1 CalFresh estimates into a
+replayable candidate envelope. The proposal contains **$86.8 million** of
+gross administration work across FY2025-26 and FY2026-27 and a **-$78.6
+million** caseload-related administration offset, for a two-year **$8.2
+million net administration cost**.
+
+That arithmetic is valid, but it is not an efficiency finding. The same
+official record estimates **302,300 affected people** and **$758 million in
+lost benefits** in FY2026-27. LIFELINE therefore shows all three quantities
+together and keeps public savings null:
+
+| Official proposal quantity | Value | LIFELINE treatment |
+|---|---:|---|
+| Implementation administration | $86.8M | gross cost |
+| Caseload-related administration offset | -$78.6M | accounting offset, not efficiency |
+| Net administration | $8.2M | proposed fiscal pressure |
+| Affected people, FY2026-27 | 302,300 | access exposure |
+| Lost benefits, FY2026-27 | $758M | household impact, never admin savings |
+
+California's FY2024 recertification processing-timeliness baseline was
+**88.91%**. The official proposal does not yet supply postimplementation
+timeliness, churn, erroneous-denial, appeal-workload, or adequacy results, and
+explicitly excludes oral-notice cost. The candidate is consequently bounded
+and cost-ready, but held on outcomes, floors, delivery, overlap, and Taxlane
+admission.
+
 ## What this proves
 
 - Benefit cliffs and take-up gaps can be measured without merging them.
@@ -46,6 +76,8 @@ path makes individual decisions.
   participation as take-up or a cost change as savings.
 - Administrative burden and rights failures remain visible.
 - Reduced participation is never automatically labeled efficiency.
+- Caseload-related administrative offsets remain separate from genuine
+  delivery efficiencies and household benefit losses.
 - A domain finding can be handed to Taxlane while admission, allocation,
   savings, and rate authority remain false.
 
@@ -53,12 +85,16 @@ path makes individual decisions.
 
 ```powershell
 cargo fmt --check
-cargo test --all-targets
+cargo test --workspace --all-targets
 cargo run --quiet -- analyze fixtures/cedar-benefit-path.tsv
 cargo run --quiet -- official-baseline fixtures/official/usda-fns-snap-2024-2025.tsv
 ```
 
 Official anchor: [HHS 2026 Poverty Guidelines](https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines).
+
+Candidate sources: [LAO CalFresh County Administration](https://lao.ca.gov/Publications/Report/5149),
+[LAO Food Assistance](https://lao.ca.gov/Publications/Report/5126), and
+[USDA FY2024 recertification timeliness](https://www.fns.usda.gov/snap/qc/timeliness/rpt-fy24).
 
 ## Boundary
 

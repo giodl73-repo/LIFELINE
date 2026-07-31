@@ -5,3 +5,10 @@ version = 4
 [[package]]
 name = "lifeline"
 version = "0.1.0"
+dependencies = [
+ "lifeline-calfresh",
+]
+
+[[package]]
+name = "lifeline-calfresh"
+version = "0.1.0"

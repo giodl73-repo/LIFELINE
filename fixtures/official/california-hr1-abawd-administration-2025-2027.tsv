@@ -1,0 +1,11 @@
+# source_id=CA-LAO-CALFRESH-ADMIN-2026-27
+# companion_source_id=CA-LAO-FOOD-ASSISTANCE-2026-27
+# evidence_label=official_state_budget_candidate
+# legislative_status=federal_law_enacted_state_budget_proposed
+# source_url=https://lao.ca.gov/Publications/Report/5149
+# companion_source_url=https://lao.ca.gov/Publications/Report/5126
+# units=thousand_nominal_dollars_and_people
+# boundary=administration offsets reflect projected caseload contraction and are not delivery efficiency; benefit loss is access context and never admin savings
+fiscal_year	gross_admin_total_thousand_dollars	gross_federal_thousand_dollars	gross_state_thousand_dollars	gross_county_thousand_dollars	caseload_offset_total_thousand_dollars	offset_federal_thousand_dollars	offset_state_thousand_dollars	offset_county_thousand_dollars	affected_people	lost_benefits_thousand_dollars
+2025-26	8400	4200	3000	1200	0	0	0	0	0	0
+2026-27	78400	24300	38000	16100	-78600	-24400	-38100	-16100	302300	758000
