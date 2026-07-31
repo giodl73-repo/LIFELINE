@@ -160,7 +160,7 @@ fn held_pack_json(result: &Analysis) -> String {
 fn run(args: &[String]) -> Result<String, String> {
     let [command, path] = args else {
         return Err(
-            "usage: lifeline <analyze|held-pack|official-baseline|official-held-pack|candidate-baseline|candidate-held-pack|level2-baseline|level2-held-pack|program-scenarios|program-realization|program-accounting|program-alternatives|program-incidence|program-delivery|program-adaptive|program-peers|program-held-pack> <fixture.tsv>"
+            "usage: lifeline <analyze|held-pack|official-baseline|official-held-pack|candidate-baseline|candidate-held-pack|level2-baseline|level2-held-pack|observation-readiness|observation-held-pack|program-scenarios|program-realization|program-accounting|program-alternatives|program-incidence|program-delivery|program-adaptive|program-peers|program-held-pack> <fixture.tsv>"
                 .into(),
         );
     };
@@ -171,7 +171,10 @@ fn run(args: &[String]) -> Result<String, String> {
     if command.starts_with("program-") {
         return lifeline_program::run(command, &input);
     }
-    if command.starts_with("candidate-") || command.starts_with("level2-") {
+    if command.starts_with("candidate-")
+        || command.starts_with("level2-")
+        || command.starts_with("observation-")
+    {
         return lifeline_calfresh::run(command, &input);
     }
     if command.starts_with("official-") {

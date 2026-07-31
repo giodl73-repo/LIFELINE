@@ -1,4 +1,5 @@
 mod level2;
+mod observation;
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 struct Year {
@@ -146,6 +147,9 @@ fn held_pack_json(result: &Candidate) -> String {
 }
 
 pub fn run(command: &str, input: &str) -> Result<String, String> {
+    if command.starts_with("observation-") {
+        return observation::run(command, input);
+    }
     if command.starts_with("level2-") {
         return level2::run(command, input);
     }

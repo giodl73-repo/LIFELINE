@@ -9,11 +9,11 @@ take-up, and blocks promotion when notice or appeal protections are absent.
 It then emits a held Taxlane ISF evidence pack whose fiscal fields remain null.
 
 LIFELINE now carries that first screen through a complete bounded semantic
-program. Thirteen executable features cover the household cliff screen,
+program. Fifteen executable features cover the household cliff screen,
 official SNAP scale, the California implementation candidate and comparison
 baseline, scenarios, service realization, accounting, alternatives, incidence,
 delivery feasibility, adaptive successors, normalized illustrative comparison,
-and an integrated held handoff.
+source-freshness readiness, and integrated held handoffs.
 
 Its first official run compares USDA's FY2024 and FY2025 national SNAP
 summaries. FY2025 average monthly participation was **42.382 million**, up
@@ -43,6 +43,8 @@ cargo run --quiet -- official-baseline fixtures/official/usda-fns-snap-2024-2025
 cargo run --quiet -- official-held-pack fixtures/official/usda-fns-snap-2024-2025.tsv
 cargo run --quiet -- level2-baseline fixtures/official/calfresh-access-rights-floors-2026-07-28.tsv
 cargo run --quiet -- level2-held-pack fixtures/official/calfresh-access-rights-floors-2026-07-28.tsv
+cargo run --quiet -- observation-readiness fixtures/official/calfresh-postimplementation-observation-readiness-2026-07-31.tsv
+cargo run --quiet -- observation-held-pack fixtures/official/calfresh-postimplementation-observation-readiness-2026-07-31.tsv
 cargo run --quiet -- program-scenarios fixtures/synthetic/calfresh-semantic-program.tsv
 cargo run --quiet -- program-realization fixtures/synthetic/calfresh-semantic-program.tsv
 cargo run --quiet -- program-accounting fixtures/synthetic/calfresh-semantic-program.tsv
@@ -109,6 +111,22 @@ period is 2020 Q4 and is too stale for candidate evaluation. LIFELINE has
 therefore completed the Level 2 comparison baseline while keeping access,
 accuracy, churn, rights, county capacity, and candidate admission held.
 
+### First postimplementation observation check
+
+The official dashboard was checked again on July 31. Its page labels the source
+updated July 28, while the workbook's own update log reaches July 29. Neither
+date means that a June implementation cohort is present: core household,
+person, application, and timeliness operations still stop in **May 2026**, and
+quality measures stop in **February 2026**. The workbook includes June EBT
+dollars, but a payment aggregate cannot establish access, accuracy, notice,
+appeal, county capacity, or an H.R. 1 effect.
+
+The executable observation check therefore reports **zero postimplementation
+operations rows, zero candidate-coded rows, and zero complete recertification
+cycles**. It makes the next reopening event exact while preventing a refreshed
+file or a later-dated financial series from being mistaken for outcome
+evidence.
+
 ## What this proves
 
 - Benefit cliffs and take-up gaps can be measured without merging them.
@@ -159,6 +177,7 @@ cargo test --workspace --all-targets
 cargo run --quiet -- analyze fixtures/cedar-benefit-path.tsv
 cargo run --quiet -- official-baseline fixtures/official/usda-fns-snap-2024-2025.tsv
 cargo run --quiet -- level2-baseline fixtures/official/calfresh-access-rights-floors-2026-07-28.tsv
+cargo run --quiet -- observation-readiness fixtures/official/calfresh-postimplementation-observation-readiness-2026-07-31.tsv
 cargo run --quiet -- program-held-pack fixtures/synthetic/calfresh-semantic-program.tsv
 ```
 

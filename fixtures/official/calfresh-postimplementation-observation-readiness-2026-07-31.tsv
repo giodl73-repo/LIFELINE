@@ -1,0 +1,17 @@
+# source_id=CA-CDSS-CALFRESH-OBSERVATION-READINESS-2026-07-31
+# evidence_label=official_postimplementation_observation_readiness
+# as_of_date=2026-07-31
+# source_page_update_label=2026-07-28
+# workbook_latest_update=2026-07-29
+# implementation_start_date=2026-06-01
+# dashboard_source=https://www.cdss.ca.gov/inforesources/data-portal/research-and-data/calfresh-data-dashboard
+# dashboard_raw_sha256=9f14ce5193b5b6e5fea7086d80bf96469ee4ff16986c578f5ade9f396c446c3a
+# boundary=A dashboard refresh is not a postimplementation observation. June EBT dollars are not access, accuracy, notice, appeal, county-capacity, or candidate-effect evidence.
+field	value	unit
+latest_operations_month	2026-05	month
+latest_quality_month	2026-02	month
+latest_churn_period	2020-Q4	quarter
+latest_ebt_month	2026-06	month
+postimplementation_operations_rows	0	rows
+candidate_coded_rows	0	rows
+full_recertification_cycles	0	cycles
