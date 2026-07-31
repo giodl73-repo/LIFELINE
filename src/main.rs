@@ -2,6 +2,8 @@ use std::env;
 use std::fs;
 use std::process::ExitCode;
 
+mod official;
+
 #[derive(Debug, Clone, PartialEq, Eq)]
 struct Step {
     earnings: i64,
@@ -157,11 +159,17 @@ fn held_pack_json(result: &Analysis) -> String {
 
 fn run(args: &[String]) -> Result<String, String> {
     let [command, path] = args else {
-        return Err("usage: lifeline <analyze|held-pack> <fixture.tsv>".into());
+        return Err(
+            "usage: lifeline <analyze|held-pack|official-baseline|official-held-pack> <fixture.tsv>"
+                .into(),
+        );
     };
     let input = fs::read_to_string(path).map_err(|error| format!("{path}: {error}"))?;
     if !input.contains("# source_id=") || !input.contains("# evidence_label=") {
         return Err("fixture must declare source_id and evidence_label".into());
+    }
+    if command.starts_with("official-") {
+        return official::run(command, &input);
     }
     let result = analyze(&parse(&input)?);
     match command.as_str() {

@@ -1,0 +1,8 @@
+# source_id=USDA-FNS-SNAP-ANNUAL-2025
+# evidence_label=official_aggregate
+# source_data_as_of=2026-07-10
+# source_sha256=c5f0903a61e857185b5beb6359974ced4533df3d923f2f1979405ee9be56f9b1
+# boundary=participation_is_not_eligibility_or_takeup_and_cost_change_is_not_savings
+fiscal_year	average_monthly_participation_thousands	average_monthly_benefit_cents_per_person	total_benefits_thousand_dollars	all_other_costs_thousand_dollars	total_costs_thousand_dollars
+2024	41709	18676	93475890	6604920	100080800
+2025	42382	18833	95782100	6808270	102590370

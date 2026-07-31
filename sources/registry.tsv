@@ -1,2 +1,3 @@
 source_id	publisher	vintage	url	use	boundary
 HHS-POVERTY-2026	HHS ASPE	2026-01	https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines	price-year and household-scale anchor	guidelines are not program eligibility rules or poverty population estimates
+USDA-FNS-SNAP-ANNUAL-2025	USDA Food and Nutrition Service	FY2024-FY2025; data as of 2026-07-10	https://www.fns.usda.gov/sites/default/files/resource-files/snap-annualsummary-7.pdf	national participation benefit and federal-cost baseline	figures are subject to revision; participation is not eligibility or take-up and reported costs do not establish need performance or savings
