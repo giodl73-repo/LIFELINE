@@ -34,6 +34,8 @@ cargo run --quiet -- candidate-baseline fixtures/official/california-hr1-abawd-a
 cargo run --quiet -- candidate-held-pack fixtures/official/california-hr1-abawd-administration-2025-2027.tsv
 cargo run --quiet -- official-baseline fixtures/official/usda-fns-snap-2024-2025.tsv
 cargo run --quiet -- official-held-pack fixtures/official/usda-fns-snap-2024-2025.tsv
+cargo run --quiet -- level2-baseline fixtures/official/calfresh-access-rights-floors-2026-07-28.tsv
+cargo run --quiet -- level2-held-pack fixtures/official/calfresh-access-rights-floors-2026-07-28.tsv
 ```
 
 The Cedar rows remain deliberately synthetic and use the 2026 HHS poverty
@@ -69,6 +71,28 @@ explicitly excludes oral-notice cost. The candidate is consequently bounded
 and cost-ready, but held on outcomes, floors, delivery, overlap, and Taxlane
 admission.
 
+## Level 2 access and rights baseline
+
+California began the expanded work and community-engagement rules on **June 1,
+2026**. The latest CDSS operational dashboard values are from May, however, and
+the latest error measures are from February. They therefore establish a
+preimplementation baseline—not observed H.R. 1 effects.
+
+The May snapshot covers **3,107,208 households and 5,166,532 people**. It
+reports 161,045 applications received, 60,469 denied, and 43,910 procedural
+denials; within those dashboard fields, procedural denials equal **72.61%** of
+all denials. Thirty-day processing timeliness was **98.78%** and expedited
+timeliness was **96.52%**. These quantities expose workload and access risk,
+but do not show that any denial was wrongful.
+
+The official FY2025-26 State Hearings report records **44,504 CalFresh appeals
+filed** and **10,434 hearings held**. It aggregates all CalFresh issues, and its
+final quarter contains only one implementation month, so it cannot measure the
+candidate's notice or appeal effect. The dashboard's latest statewide churn
+period is 2020 Q4 and is too stale for candidate evaluation. LIFELINE has
+therefore completed the Level 2 comparison baseline while keeping access,
+accuracy, churn, rights, county capacity, and candidate admission held.
+
 ## What this proves
 
 - Benefit cliffs and take-up gaps can be measured without merging them.
@@ -80,6 +104,9 @@ admission.
   delivery efficiencies and household benefit losses.
 - A domain finding can be handed to Taxlane while admission, allocation,
   savings, and rate authority remain false.
+- Preimplementation operations and aggregate hearings can be fixed as future
+  comparison surfaces without being mislabeled as candidate outcomes.
+- Stale churn data and uncoded hearing flows remain explicit evidence gaps.
 
 ## Validate
 
@@ -88,6 +115,7 @@ cargo fmt --check
 cargo test --workspace --all-targets
 cargo run --quiet -- analyze fixtures/cedar-benefit-path.tsv
 cargo run --quiet -- official-baseline fixtures/official/usda-fns-snap-2024-2025.tsv
+cargo run --quiet -- level2-baseline fixtures/official/calfresh-access-rights-floors-2026-07-28.tsv
 ```
 
 Official anchor: [HHS 2026 Poverty Guidelines](https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines).
@@ -95,6 +123,10 @@ Official anchor: [HHS 2026 Poverty Guidelines](https://aspe.hhs.gov/topics/pover
 Candidate sources: [LAO CalFresh County Administration](https://lao.ca.gov/Publications/Report/5149),
 [LAO Food Assistance](https://lao.ca.gov/Publications/Report/5126), and
 [USDA FY2024 recertification timeliness](https://www.fns.usda.gov/snap/qc/timeliness/rpt-fy24).
+
+Level 2 baseline sources: [CDSS CalFresh Data Dashboard](https://www.cdss.ca.gov/inforesources/data-portal/research-and-data/calfresh-data-dashboard),
+[CDSS FY2025-26 Hearing Data Report](https://www.cdss.ca.gov/Portals/9/SHD/SHD%20Hearing%20Data%20Summary%20Report%20FY%202025-2026.pdf),
+and [CDSS work and community-engagement requirements](https://www.cdss.ca.gov/inforesources/calfresh/abawd).
 
 ## Boundary
 

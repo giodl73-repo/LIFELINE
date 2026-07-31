@@ -1,3 +1,5 @@
+mod level2;
+
 #[derive(Debug, Clone, PartialEq, Eq)]
 struct Year {
     fiscal_year: String,
@@ -144,6 +146,9 @@ fn held_pack_json(result: &Candidate) -> String {
 }
 
 pub fn run(command: &str, input: &str) -> Result<String, String> {
+    if command.starts_with("level2-") {
+        return level2::run(command, input);
+    }
     if !input.contains("# evidence_label=official_state_budget_candidate") {
         return Err("candidate command requires official_state_budget_candidate evidence".into());
     }

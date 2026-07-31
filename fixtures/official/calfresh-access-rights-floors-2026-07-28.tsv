@@ -1,0 +1,35 @@
+# source_id=CA-CALFRESH-ACCESS-RIGHTS-FLOORS-2026-07-28
+# evidence_label=official_calfresh_level2_floor_snapshot
+# as_of_date=2026-07-28
+# implementation_start_date=2026-06-01
+# latest_operations_month=2026-05
+# latest_error_month=2026-02
+# latest_churn_period=2020-Q4
+# dashboard_source=https://www.cdss.ca.gov/inforesources/data-portal/research-and-data/calfresh-data-dashboard
+# dashboard_raw_sha256=9f14ce5193b5b6e5fea7086d80bf96469ee4ff16986c578f5ade9f396c446c3a
+# hearing_source=https://www.cdss.ca.gov/Portals/9/SHD/SHD%20Hearing%20Data%20Summary%20Report%20FY%202025-2026.pdf
+# implementation_source=https://www.cdss.ca.gov/inforesources/calfresh/abawd
+# boundary=May operations and February error measures predate June implementation; annual hearings mix programs and issues; churn is stale.
+metric	value	unit
+calfresh_households	3107208	households
+calfresh_people	5166532	people
+applications_received	161045	applications
+applications_approved	93045	applications
+applications_denied	60469	applications
+procedural_denials	43910	applications
+thirty_day_timeliness	9878	basis_points
+expedited_timeliness	9652	basis_points
+negative_error_completed_cases	230	cases
+negative_error_rate	2608	basis_points
+active_error_rate	1080	basis_points
+missed_interview_denials	2117	applications
+failed_determination_denials	1386	applications
+procedural_reason_denials	1280	applications
+churn_30_day_2020_q4	1105	basis_points
+churn_90_day_2020_q4	2579	basis_points
+calfresh_appeals_filed_fy2025_26	44504	appeals
+calfresh_appeals_withdrawn_fy2025_26	32769	appeals
+calfresh_hearings_scheduled_fy2025_26	42368	hearings
+calfresh_hearings_held_fy2025_26	10434	hearings
+calfresh_hearings_postponed_fy2025_26	4204	hearings
+calfresh_hearing_nonappearances_fy2025_26	5569	hearings
