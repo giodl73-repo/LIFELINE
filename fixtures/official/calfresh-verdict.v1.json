@@ -1,0 +1,34 @@
+{
+  "assessment_id": "lifeline-calfresh-candidate:2026-07-31",
+  "schema": "vtrace.verdict-candidate-assessment.v1",
+  "object_class": "candidate",
+  "candidate_id": "california_hr1_abawd_implementation",
+  "producer": "LIFELINE",
+  "producer_commit": "ba39c3cb0f1d06f9326816dc1e38753e8112d0a8",
+  "fiscal_owner": "TAXLANE",
+  "scores": {"value":1,"effectiveness":1,"resilience":1,"deliverability":2,"iteration":2,"coverage_and_fair_access":2,"trust":3,"total":12,"possible":21,"minimum":1,"total_is_gate_disposition":false},
+  "dimension_reviews": [
+    {"dimension":"value","recommended_disposition":"required_blocked","hold":"observed household outcome, lifecycle cost, oral-notice cost, and compatible alternative missing"},
+    {"dimension":"effectiveness","recommended_disposition":"required_blocked","hold":"candidate-coded postimplementation exposure and causal outcome missing"},
+    {"dimension":"resilience","recommended_disposition":"required_blocked","hold":"observed churn, correction, recovery, adequacy, and stress continuity missing"},
+    {"dimension":"deliverability","recommended_disposition":"required_blocked","hold":"postimplementation staffing, queues, notice workload, county variation, and realized capacity missing"},
+    {"dimension":"iteration","recommended_disposition":"required_blocked","hold":"operational correction, outcome learning, rollback, and fiscal rebalancing not demonstrated"},
+    {"dimension":"coverage_and_fair_access","recommended_disposition":"required_blocked","hold":"candidate-coded protected-group, county, notice, appeal, and hardship effects missing"},
+    {"dimension":"trust","recommended_disposition":"required_ready","evidence":"official California and USDA sources, checksummed fixtures, replayable packs, aggregate-only boundary, roles, and null fiscal claims"}
+  ],
+  "producer_evidence": [
+    {"command":"cargo run --quiet -- candidate-held-pack fixtures/official/california-hr1-abawd-administration-2025-2027.tsv","pack_id":"lifeline:california-hr1-abawd-implementation:v1"},
+    {"command":"cargo run --quiet -- level2-held-pack fixtures/official/calfresh-access-rights-floors-2026-07-28.tsv","pack_id":"lifeline:california-hr1-level2-floor-snapshot:v1"}
+  ],
+  "accounting_boundaries": {
+    "gross_administration_thousand_dollars": 86800,
+    "caseload_related_offset_thousand_dollars": -78600,
+    "net_administration_thousand_dollars": 8200,
+    "projected_affected_people_fy2026_27": 302300,
+    "projected_lost_benefits_thousand_dollars_fy2026_27": 758000,
+    "offset_is_delivery_efficiency": false,
+    "lost_benefits_are_savings": false
+  },
+  "next_evidence_action": "Observe one full candidate-coded recertification cycle across exposure, exemptions, service, rights, adequacy, distribution, county capacity, and actual cost.",
+  "authority": {"eligibility_decision":false,"taxlane_admission":false,"savings":false,"allocation":false,"rate_change":false,"release":false}
+}

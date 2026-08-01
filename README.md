@@ -15,6 +15,17 @@ baseline, scenarios, service realization, accounting, alternatives, incidence,
 delivery feasibility, adaptive successors, normalized illustrative comparison,
 source-freshness readiness, and integrated held handoffs.
 
+The repo-local [VERDICT capability assessment](docs/vtrace/CAPABILITY_ASSESSMENT.md)
+scores the current program **15/21**. Post-implementation household effects,
+burden distribution, county delivery capacity, and fiscal authority remain
+held until observed evidence exists.
+
+The owner-aligned [CalFresh candidate assessment](docs/vtrace/CALFRESH_CANDIDATE_ASSESSMENT.md)
+scores its current evidence **12/21**. The active implementation and access
+baseline are substantive, but only Trust is admission-ready until one complete
+candidate-coded recertification cycle observes service, rights, adequacy,
+distribution, capacity, and cost together.
+
 Its first official run compares USDA's FY2024 and FY2025 national SNAP
 summaries. FY2025 average monthly participation was **42.382 million**, up
 **673,000 (1.61%)**; total program costs were **$102.590 billion**, up **2.50%**.
