@@ -8,6 +8,11 @@ computes disposable resources at every step, detects benefit cliffs, measures
 take-up, and blocks promotion when notice or appeal protections are absent.
 It then emits a held Taxlane ISF evidence pack whose fiscal fields remain null.
 
+The repo-local [VERDICT capability assessment](docs/vtrace/CAPABILITY_ASSESSMENT.md)
+scores the current program **15/21**. Post-implementation household effects,
+burden distribution, county delivery capacity, and fiscal authority remain
+held until observed evidence exists.
+
 Its first official run compares USDA's FY2024 and FY2025 national SNAP
 summaries. FY2025 average monthly participation was **42.382 million**, up
 **673,000 (1.61%)**; total program costs were **$102.590 billion**, up **2.50%**.
