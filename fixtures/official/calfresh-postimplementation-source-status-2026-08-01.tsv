@@ -1,0 +1,10 @@
+# source_id=CA-CDSS-CALFRESH-POSTIMPLEMENTATION-STATUS-2026-08-01
+# evidence_label=official_postimplementation_source_status
+# sources=https://www.cdss.ca.gov/inforesources/calfresh/abawd;https://www.cdss.ca.gov/inforesources/research-and-data/calfresh-data-tables/stat-47;https://www.cdss.ca.gov/inforesources/cdss-programs/calfresh-resource-center/meetings-and-conferences/all-partner-hr1-advisory
+# capture_note=implementation began 2026-06-01; STAT 47 data are temporarily removed during de-identification update; advisory materials do not publish candidate-coded outcomes
+field	value
+implementation_start_date	2026-06-01
+as_of_date	2026-08-01
+minimum_observation_days	90
+postimplementation_source_available	no
+postimplementation_records_candidate_coded	no

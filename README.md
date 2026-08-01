@@ -47,6 +47,7 @@ cargo run --quiet -- official-baseline fixtures/official/usda-fns-snap-2024-2025
 cargo run --quiet -- official-held-pack fixtures/official/usda-fns-snap-2024-2025.tsv
 cargo run --quiet -- level2-baseline fixtures/official/calfresh-access-rights-floors-2026-07-28.tsv
 cargo run --quiet -- level2-held-pack fixtures/official/calfresh-access-rights-floors-2026-07-28.tsv
+cargo run --quiet -- observation-gate fixtures/official/calfresh-postimplementation-source-status-2026-08-01.tsv
 ```
 
 The Cedar rows remain deliberately synthetic and use the 2026 HHS poverty
@@ -104,6 +105,15 @@ period is 2020 Q4 and is too stale for candidate evaluation. LIFELINE has
 therefore completed the Level 2 comparison baseline while keeping access,
 accuracy, churn, rights, county capacity, and candidate admission held.
 
+As of **August 1, 2026**, only **61 days** have elapsed since implementation.
+The executable observation gate requires at least 90 days plus an available,
+candidate-coded postimplementation series. The current official source status
+passes none of those three conditions, so the candidate effect and public
+savings remain null. Reaching 90 days will trigger review; it will not by
+itself admit the candidate. The repo-local
+[role review](docs/vtrace/CALFRESH_OBSERVATION_GATE_REVIEW.md) records the
+taxpayer, rights, delivery, citation, and scope decisions.
+
 ## What this proves
 
 - Benefit cliffs and take-up gaps can be measured without merging them.
@@ -118,6 +128,8 @@ accuracy, churn, rights, county capacity, and candidate admission held.
 - Preimplementation operations and aggregate hearings can be fixed as future
   comparison surfaces without being mislabeled as candidate outcomes.
 - Stale churn data and uncoded hearing flows remain explicit evidence gaps.
+- Elapsed time, source availability, and candidate coding are independent
+  gates; none can substitute for the others.
 
 ## Validate
 
@@ -127,6 +139,7 @@ cargo test --workspace --all-targets
 cargo run --quiet -- analyze fixtures/cedar-benefit-path.tsv
 cargo run --quiet -- official-baseline fixtures/official/usda-fns-snap-2024-2025.tsv
 cargo run --quiet -- level2-baseline fixtures/official/calfresh-access-rights-floors-2026-07-28.tsv
+cargo run --quiet -- observation-gate fixtures/official/calfresh-postimplementation-source-status-2026-08-01.tsv
 ```
 
 Official anchor: [HHS 2026 Poverty Guidelines](https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines).
@@ -138,6 +151,9 @@ Candidate sources: [LAO CalFresh County Administration](https://lao.ca.gov/Publi
 Level 2 baseline sources: [CDSS CalFresh Data Dashboard](https://www.cdss.ca.gov/inforesources/data-portal/research-and-data/calfresh-data-dashboard),
 [CDSS FY2025-26 Hearing Data Report](https://www.cdss.ca.gov/Portals/9/SHD/SHD%20Hearing%20Data%20Summary%20Report%20FY%202025-2026.pdf),
 and [CDSS work and community-engagement requirements](https://www.cdss.ca.gov/inforesources/calfresh/abawd).
+
+Observation sources: [CDSS STAT 47](https://www.cdss.ca.gov/inforesources/research-and-data/calfresh-data-tables/stat-47)
+and the [CDSS All Partner H.R. 1 Advisory](https://www.cdss.ca.gov/inforesources/cdss-programs/calfresh-resource-center/meetings-and-conferences/all-partner-hr1-advisory).
 
 ## Boundary
 

@@ -33,6 +33,13 @@ least one full recertification cycle with candidate-coded exposure, exemption,
 waiver, timeliness, churn, denial-correction, notice, hearing, language,
 disability, household-adequacy, county-workload, and implementation-cost data.
 
+The August 1 source-status replay makes the timing constraint executable:
+61 elapsed days is below the 90-day minimum observation window, the relevant
+STAT 47 data are temporarily unavailable during the state's de-identification
+update, and published advisory material is not candidate-coded outcome data.
+The three conditions are evaluated independently, and all must pass before a
+full gate review—not automatic admission—can begin.
+
 - [CDSS CalFresh Data Dashboard](https://www.cdss.ca.gov/inforesources/data-portal/research-and-data/calfresh-data-dashboard)
 - [CDSS FY2025-26 Hearing Data Report](https://www.cdss.ca.gov/Portals/9/SHD/SHD%20Hearing%20Data%20Summary%20Report%20FY%202025-2026.pdf)
 - [CDSS ABAWD implementation page](https://www.cdss.ca.gov/inforesources/calfresh/abawd)
