@@ -127,6 +127,12 @@ cycles**. It makes the next reopening event exact while preventing a refreshed
 file or a later-dated financial series from being mistaken for outcome
 evidence.
 
+An [August 1 source recheck](docs/calfresh-postimplementation-source-status-2026-08-01.md)
+adds two useful boundaries: the relevant STAT 47 files are temporarily removed
+during a state de-identification update, and implementation advisory materials
+are not candidate-coded outcomes. Sixty-one elapsed days, source availability,
+and cohort coding remain separate facts; none creates a savings value.
+
 ## What this proves
 
 - Benefit cliffs and take-up gaps can be measured without merging them.
